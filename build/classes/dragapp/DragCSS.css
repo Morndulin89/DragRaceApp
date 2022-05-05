@@ -1,0 +1,173 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 15.3.2022, 10:12:47
+    Author     : Pulu
+*/
+
+.root{
+    -fx-background-color: #F7E8F0;
+}
+/*MENUBAR*/
+
+.menu-bar {
+    -fx-background-color: #F7E8F0;
+    -fx-effect: dropShadow(three-pass-box, rgba(0, 0, 0, 0.06), 10.0, 0.0, 0.0, 2.0);
+}
+
+.menu-bar .menu-item :selected{
+    -fx-background-color: #F1C6DE;
+    -fx-effect: dropShadow(three-pass-box, rgba(0, 0, 0, 0.06), 10.0, 0.0, 0.0, 2.0);
+}
+.menu-bar .menu-item:hover{
+    -fx-background-color: #F1C6DE;
+
+
+
+}
+.menu-bar .menu-button:hover, .menu-bar .menu-button:focused, .menu-bar .menu-button:showing {
+    -fx-background: #F7E8F0;
+
+}
+
+/*TABPANE */
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: #F7E8F0;
+}
+.tab-pane .tab{
+    -fx-background-color: #F7E8F0;
+}
+.tab-pane .tab:selected{
+    -fx-background-color: #F1C6DE;
+}
+.tab tab-label{
+    -fx-alignment: CENTER;
+    -fx-font-size: 12px;
+}
+.tab:selected .tab-label{
+    -fx-alignment: CENTER;
+
+}
+.tab .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #ba9c00;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial Black";
+}
+.button{
+    -fx-background-color: #F1C6DE;
+
+}
+.buttonShadow{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.06), 10.0, 0.0, 0.0, 8.0)
+}
+.text-area{
+    -fx-background-color: #F7E8F0;
+    -fx-text-fill: #ba9c00;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial Black";
+}
+.text{
+    -fx-fill: #ba9c00;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial Black";
+}
+.label {
+
+    -fx-font-size: 20px
+}
+
+/*TABLEVIEWS*/
+
+.table-view .background{
+    -fx-background-color: #F7E8F0;
+}
+
+.table-view .column-header {
+    -fx-alignment: LEFT;
+    -fx-background-color: transparent;
+}
+.table-view .column-header-background {
+    -fx-background-color: #F1C6DE;
+
+}
+.table-view .table-cell .background {
+    -fx-background-radius: 5px;
+    -fx-background-color: #ffffff;
+
+}
+.table-view .table-cell {
+    -fx-background-radius: 5px;
+    -fx-border-color: transparent;
+
+}
+.table-row-cell:odd{
+    -fx-background-color: #ffffff;
+}
+
+.table-row-cell:even{
+    -fx-background-color: #F7E8F0;
+}
+.table-row-cell:selected {
+    -fx-text-background-color: #000000;
+    -fx-background-color: #F1C6DE;
+    -fx-background-radius: 5px;
+}
+
+.table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:vertical .track,
+.table-view .virtual-flow .scroll-bar:vertical .track-background,
+.table-view .virtual-flow .scroll-bar:horizontal,
+.table-view .virtual-flow .scroll-bar:horizontal .track,
+.table-view .virtual-flow .scroll-bar:horizontal .track-background {
+    -fx-background-color: transparent;
+}
+.table-view .virtual-flow .scroll-bar:vertical .thumb {
+    -fx-background-color: #F7E8F0;
+    -fx-background-radius: 12;
+}
+.table-view .virtual-flow .scroll-bar:horizontal .thumb {
+    -fx-background-color: #F7E8F0;
+    -fx-background-radius: 12;
+}
+.table-view .virtual-flow .scroll-bar .increment-button,
+.table-view .virtual-flow .scroll-bar .decrement-button {
+    -fx-opacity: 0;
+    -fx-padding: 2;
+    -fx-background-radius: 12;
+}
+
+/*COMBOBOX */
+
+.combo-box-base {
+    -fx-background-color: #F7E8F0;
+    -fx-background-radius: 4;
+    -fx-effect: dropShadow(three-pass-box, rgba(0, 0, 0, 0.06), 10.0, 0.0, 0.0, 2.0);
+
+}
+.combo-box-popup .list-view {
+    -fx-background-color: transparent;
+    -fx-effect: dropShadow(three-pass-box, rgba(0, 0, 0, 0.06), 10.0, 0.0, 0.0, 2.0);
+    -fx-background-radius: 20;
+    -fx-text-fill: #000000;
+
+}
+
+.combo-box-popup .list-view .list-cell {
+    -fx-background-color:  #ffffff;
+    -fx-padding: 4 0 4 5;
+    -fx-text-fill: #000000;
+
+}
+.combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: #F1C6DE;
+    -fx-text-fill: #ffffff;
+}
+

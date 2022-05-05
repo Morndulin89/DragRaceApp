@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" fx:id="scene1" maxHeight="1000.0" maxWidth="1200.0" prefHeight="1000.0" prefWidth="1200.0" stylesheets="@DragCSS.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dragapp.DragFXMLDocumentController">
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="800.0" stylesheets="@DragCSS.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <VBox prefHeight="95.0" prefWidth="1000.0" styleClass="menu-bar" stylesheets="@DragCSS.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="80.0" fitWidth="665.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/RPDRlogo.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="4.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <MenuBar stylesheets="@DragCSS.css">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="File">
+                        <items>
+                          <MenuItem mnemonicParsing="false" onAction="#onActionMenuItemClose" text="Close" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Help">
+                        <items>
+                              <MenuItem mnemonicParsing="false" onAction="#onActionMenuItemAboutApp" text="About the App" />
+                          <MenuItem mnemonicParsing="false" onAction="#onActionMenuItemAboutRace" text="About the Drag race" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+               </children>
+            </VBox>
+         </top>
+         <center>
+            <TabPane prefHeight="463.0" prefWidth="800.0" stylesheets="@DragCSS.css" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab text="Contestant">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" stylesheets="@DragCSS.css">
+                           <children>
+                              <BorderPane layoutY="-1.0" prefHeight="455.0" prefWidth="800.0" styleClass="root" stylesheets="@DragCSS.css" AnchorPane.bottomAnchor="-0.5999999999999659" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+                                 <right>
+                                    <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="655.0" prefWidth="338.0" stylesheets="@DragCSS.css" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <ImageView fx:id="imgViewCont" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Images/defaultIMG.png" />
+                                             </image>
+                                             <VBox.margin>
+                                                <Insets left="94.0" right="94.0" top="4.0" />
+                                             </VBox.margin>
+                                          </ImageView>
+                                          <Label text="First name">
+                                             <VBox.margin>
+                                                <Insets left="20.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <TextField fx:id="txtContFName" styleClass="text" stylesheets="@DragCSS.css">
+                                             <VBox.margin>
+                                                <Insets left="4.0" right="4.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <Label text="Surname">
+                                             <VBox.margin>
+                                                <Insets left="20.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <TextField fx:id="txtContSName" styleClass="text">
+                                             <VBox.margin>
+                                                <Insets left="4.0" right="4.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <Label text="Drag name">
+                                             <VBox.margin>
+                                                <Insets left="20.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <TextField fx:id="txtContDName" styleClass="text">
+                                             <VBox.margin>
+                                                <Insets left="4.0" right="4.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <Label fx:id="lblSeasons" text="Seasons:">
+                                             <VBox.margin>
+                                                <Insets left="20.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <TextArea fx:id="txtContSeasons" prefHeight="85.0" prefWidth="314.0" styleClass="text-area">
+                                             <VBox.margin>
+                                                <Insets left="4.0" right="4.0" />
+                                             </VBox.margin>
+                                          </TextArea>
+                                          <Label fx:id="lblWins" text="Episodes:">
+                                             <VBox.margin>
+                                                <Insets left="20.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <TextArea fx:id="txtContWins" prefHeight="225.0" prefWidth="314.0" styleClass="text-area">
+                                             <VBox.margin>
+                                                <Insets bottom="12.0" left="4.0" right="4.0" />
+                                             </VBox.margin>
+                                          </TextArea>
+                                          <Button fx:id="btnContNewSave" mnemonicParsing="false" onAction="#onActionBtnContNewSave" prefHeight="35.0" prefWidth="150.0" text="Save New" visible="false">
+                                             <VBox.margin>
+                                                <Insets left="92.0" top="8.0" />
+                                             </VBox.margin>
+                                          </Button>
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets right="20.0" />
+                                       </BorderPane.margin>
+                                    </VBox>
+                                 </right>
+                                 <center>
+                                    <Separator orientation="VERTICAL" prefHeight="655.0" prefWidth="0.0" BorderPane.alignment="CENTER">
+                                       <opaqueInsets>
+                                          <Insets bottom="12.0" />
+                                       </opaqueInsets>
+                                    </Separator>
+                                 </center>
+                                 <left>
+                                    <VBox prefHeight="655.0" prefWidth="820.0" stylesheets="@DragCSS.css" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <TableView fx:id="tblViewContestants" onMouseClicked="#onActionTblViewContestants" prefHeight="720.0" prefWidth="808.0" stylesheets="@DragCSS.css">
+                                            <columns>
+                                                <TableColumn fx:id="tblViewColumnContFname" prefWidth="260.79997634887695" text="First name" />
+                                              <TableColumn fx:id="tblViewColumnContLname" prefWidth="240.79998779296875" text="Last name" />
+                                              <TableColumn fx:id="tblViewColumnContDname" prefWidth="305.5999755859375" text="Drag name" />
+                                            </columns>
+                                             <VBox.margin>
+                                                <Insets left="12.0" top="10.0" />
+                                             </VBox.margin>
+                                          </TableView>
+                                          <HBox prefHeight="140.0" prefWidth="820.0" stylesheets="@DragCSS.css">
+                                             <children>
+                                                <Button fx:id="btnContEdit" mnemonicParsing="false" onAction="#onActionBtnContEdit" prefHeight="35.0" prefWidth="150.0" text="Edit">
+                                                   <HBox.margin>
+                                                      <Insets left="141.0" right="20.0" top="20.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <Button fx:id="btnContDelete" mnemonicParsing="false" onAction="#onActionBtnContDelete" prefHeight="35.0" prefWidth="150.0" text="Delete ">
+                                                   <HBox.margin>
+                                                      <Insets top="20.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <Button fx:id="btnContNew" mnemonicParsing="false" onAction="#onActionBtnContNew" prefHeight="35.0" prefWidth="150.0" text="New">
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" top="20.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                             </children>
+                                             <padding>
+                                                <Insets left="12.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets />
+                                       </BorderPane.margin>
+                                       <padding>
+                                          <Insets top="4.0" />
+                                       </padding>
+                                    </VBox>
+                                 </left>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Host">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" stylesheets="@DragCSS.css">
+                           <children>
+                              <BorderPane layoutX="-1.0" prefHeight="455.0" prefWidth="800.0" styleClass="root" stylesheets="@DragCSS.css" AnchorPane.bottomAnchor="-0.599999999999909" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+                                 <right>
+                                    <VBox prefHeight="655.0" prefWidth="338.0" styleClass="root" stylesheets="@DragCSS.css" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../Harjoitustyo/DragRaceApp/src/Images/defaultIMG.png" />
+                                             </image>
+                                             <VBox.margin>
+                                                <Insets left="94.0" right="94.0" top="4.0" />
+                                             </VBox.margin>
+                                          </ImageView>
+                                          <Label text="First name">
+                                             <VBox.margin>
+                                                <Insets left="20.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <TextField fx:id="txtHostFName" styleClass="text" stylesheets="@DragCSS.css">
+                                             <VBox.margin>
+                                                <Insets left="4.0" right="4.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <Label text="Surname">
+                                             <VBox.margin>
+                                                <Insets left="20.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <TextField fx:id="txtHostSName" styleClass="text">
+                                             <VBox.margin>
+                                                <Insets left="4.0" right="4.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <Label fx:id="lblHostSeasons" text="Seasons:">
+                                             <VBox.margin>
+                                                <Insets left="20.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <TextArea fx:id="txtHostSeasons" prefHeight="382.0" prefWidth="326.0" styleClass="text-area">
+                                             <VBox.margin>
+                                                <Insets bottom="12.0" left="4.0" right="4.0" />
+                                             </VBox.margin>
+                                          </TextArea>
+                                          <Button fx:id="btnHostNewSave" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" onAction="#onActionBtnHostNewSave" text="Save new" visible="false">
+                                             <VBox.margin>
+                                                <Insets left="92.0" top="8.0" />
+                                             </VBox.margin>
+                                          </Button>
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets right="20.0" />
+                                       </BorderPane.margin>
+                                    </VBox>
+                                 </right>
+                                 <center>
+                                    <Separator orientation="VERTICAL" prefHeight="200.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                                 <left>
+                                    <VBox prefHeight="803.0" prefWidth="818.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <TableView fx:id="tblViewHosts" onMouseClicked="#onActionTblViewHosts" prefHeight="720.0" prefWidth="808.0">
+                                            <columns>
+                                              <TableColumn fx:id="tblViewHostFName" prefWidth="404.0" text="First name" />
+                                              <TableColumn fx:id="tblViewHostLName" prefWidth="404.0" text="Last name" />
+                                            </columns>
+                                             <opaqueInsets>
+                                                <Insets left="12.0" />
+                                             </opaqueInsets>
+                                             <VBox.margin>
+                                                <Insets left="12.0" top="10.0" />
+                                             </VBox.margin>
+                                          </TableView>
+                                          <HBox prefHeight="126.0" prefWidth="818.0">
+                                             <children>
+                                                <Button fx:id="btnHostSaveNew" mnemonicParsing="false" onAction="#onActionBtnHostNew" prefHeight="35.0" prefWidth="150.0" text="New">
+                                                   <HBox.margin>
+                                                      <Insets left="141.0" top="20.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <Button fx:id="btnHostEdit" mnemonicParsing="false" onAction="#onActionBtnHostEdit" prefHeight="35.0" prefWidth="150.0" text="Edit">
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" right="20.0" top="20.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <Button fx:id="btnHostDelete" mnemonicParsing="false" onAction="#onActionBtnHostDelete" prefHeight="35.0" prefWidth="150.0" text="Delete">
+                                                   <HBox.margin>
+                                                      <Insets top="20.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                             </children>
+                                             <padding>
+                                                <Insets left="12.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets top="4.0" />
+                                       </BorderPane.margin>
+                                    </VBox>
+                                 </left>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Season">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" stylesheets="@DragCSS.css">
+                           <children>
+                              <BorderPane prefHeight="545.0" prefWidth="1184.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" styleClass="root" stylesheets="@DragCSS.css" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <TableView fx:id="tblViewSeasonEpisodes" prefHeight="200.0" prefWidth="360.0">
+                                            <columns>
+                                              <TableColumn fx:id="tblColumnSeasonEpName" prefWidth="219.9999237060547" text="Episode name" />
+                                              <TableColumn fx:id="tblColumnSeasonEpDate" minWidth="0.0" prefWidth="139.1999969482422" text="Date" />
+                                            </columns>
+                                             <HBox.margin>
+                                                <Insets bottom="20.0" left="35.0" top="12.0" />
+                                             </HBox.margin>
+                                          </TableView>
+                                          <TableView fx:id="tblViewSeasonCont" prefHeight="200.0" prefWidth="360.0">
+                                            <columns>
+                                              <TableColumn fx:id="tblColumnSeasonContDName" prefWidth="357.60004884004593" text="Drag name" />
+                                              <TableColumn minWidth="0.0" prefWidth="0.0" text="C2" />
+                                            </columns>
+                                             <HBox.margin>
+                                                <Insets bottom="20.0" left="25.0" right="25.0" top="12.0" />
+                                             </HBox.margin>
+                                          </TableView>
+                                          <TableView fx:id="tblViewSeasonHost" prefHeight="200.0" prefWidth="360.0">
+                                            <columns>
+                                              <TableColumn fx:id="tblColumnSeasonHostFName" prefWidth="178.39989626407623" text="First name" />
+                                              <TableColumn fx:id="tblColumnSeasonHostLName" prefWidth="181.60015869140625" text="Surname" />
+                                            </columns>
+                                             <HBox.margin>
+                                                <Insets bottom="20.0" right="12.0" top="12.0" />
+                                             </HBox.margin>
+                                          </TableView>
+                                       </children>
+                                    </HBox>
+                                 </center>
+                                 <top>
+                                    <VBox prefHeight="55.0" prefWidth="984.0" styleClass="menu-bar" stylesheets="@DragCSS.css" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <ComboBox fx:id="cboSeasonPicker" prefWidth="250.0" promptText="Season">
+                                             <VBox.margin>
+                                                <Insets left="20.0" top="5.0" />
+                                             </VBox.margin>
+                                          </ComboBox>
+                                          <HBox prefHeight="38.0" prefWidth="984.0">
+                                             <children>
+                                                <Label text="Episodes">
+                                                   <padding>
+                                                      <Insets left="28.0" />
+                                                   </padding>
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <Label text="Contestants">
+                                                   <padding>
+                                                      <Insets left="307.0" />
+                                                   </padding>
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <Label text="Hosts">
+                                                   <HBox.margin>
+                                                      <Insets left="279.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </top>
+                                 <bottom>
+                                    <HBox prefHeight="140.0" prefWidth="820.0" styleClass="root" stylesheets="@DragCSS.css" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Button fx:id="btnEditSeason" mnemonicParsing="false" onAction="#onActionBtnSeasonEdit" prefHeight="35.0" prefWidth="150.0" text="Edit">
+                                             <HBox.margin>
+                                                <Insets left="323.0" right="20.0" top="20.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button fx:id="btnSeasonDelete" mnemonicParsing="false" onAction="#onActionBtnSeasonDelete" prefHeight="35.0" prefWidth="150.0" text="Delete ">
+                                             <HBox.margin>
+                                                <Insets top="20.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button fx:id="btnSeasonNew" mnemonicParsing="false" onAction="#onActionBtnSeasonNew" prefHeight="35.0" prefWidth="150.0" text="New">
+                                             <HBox.margin>
+                                                <Insets left="20.0" top="20.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                       <padding>
+                                          <Insets left="12.0" />
+                                       </padding>
+                                    </HBox>
+                                 </bottom>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

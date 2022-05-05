@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" fx:id="scene2" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1000.0" prefWidth="1200.0" stylesheets="@DragCSS.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dragapp.DeleteSeasonStuffController">
+   <children>
+      <BorderPane maxHeight="500.0" maxWidth="900.0" prefWidth="500.0" stylesheets="@DragCSS.css" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="150.0">
+         <top>
+            <ImageView fitHeight="95.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../Images/RPDRlogo.png" />
+               </image>
+               <BorderPane.margin>
+                  <Insets top="4.0" />
+               </BorderPane.margin>
+            </ImageView>
+         </top>
+         <center>
+            <HBox maxHeight="300.0" maxWidth="900.0" prefHeight="300.0" prefWidth="900.0" stylesheets="@DragCSS.css" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox maxWidth="300.0" prefHeight="300.0" prefWidth="300.0">
+                     <children>
+                        <Label text="Delete contestant from ">
+                           <VBox.margin>
+                              <Insets left="20.0" top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="Season">
+                           <VBox.margin>
+                              <Insets left="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="Contestant">
+                           <VBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <ComboBox fx:id="cboSeasonCont" prefWidth="150.0">
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </ComboBox>
+                        <Label text="Season">
+                           <VBox.margin>
+                              <Insets left="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <ComboBox fx:id="cboContSeasonSeason" prefWidth="150.0">
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </ComboBox>
+                        <Button maxHeight="35.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onActionDeleteContFromSeason" text="Delete contestant">
+                           <VBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <Separator orientation="VERTICAL" prefHeight="200.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Separator>
+                  <VBox prefHeight="300.0" prefWidth="300.0">
+                     <children>
+                        <Label text="Delete contestant from">
+                           <VBox.margin>
+                              <Insets left="20.0" top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="Episode">
+                           <VBox.margin>
+                              <Insets left="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="Contestant">
+                           <VBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <ComboBox fx:id="cboEpisodesCont" prefWidth="150.0">
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </ComboBox>
+                        <Label text="Episode">
+                           <VBox.margin>
+                              <Insets left="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <ComboBox fx:id="cboContEpisodeEpisode" prefWidth="150.0">
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </ComboBox>
+                        <Button maxHeight="35.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onActionDeleteContFromEpisode" text="Delete contestant">
+                           <VBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <Separator orientation="VERTICAL" prefHeight="200.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Separator>
+                  <VBox prefHeight="200.0" prefWidth="300.0">
+                     <children>
+                        <Label text="Delete host  from ">
+                           <VBox.margin>
+                              <Insets left="20.0" top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="Season">
+                           <VBox.margin>
+                              <Insets left="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="Host">
+                           <VBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <ComboBox fx:id="cboSeasonHost" prefWidth="150.0">
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </ComboBox>
+                        <Label text="Season">
+                           <VBox.margin>
+                              <Insets left="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <ComboBox fx:id="cboHostSeasonSeason" prefWidth="150.0">
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </ComboBox>
+                        <Button maxHeight="35.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onActionDeleteHostFromSeason" text="Delete host">
+                           <VBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </center>
+         <bottom>
+            <Button maxWidth="200.0" mnemonicParsing="false" onAction="#onActionSendInfoToMainWindow" text="I'm ready!" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin></Button>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
