@@ -2,6 +2,8 @@
 
 IF you want to test out this app, here's the mySQL-file: 
 
+the app uses user = "Harjoitus" and password "harjoitus"
+
 DROP DATABASE IF EXISTS DragRace;
 
 CREATE DATABASE IF NOT EXISTS DragRace;
