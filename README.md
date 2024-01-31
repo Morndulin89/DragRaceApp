@@ -1,5 +1,7 @@
 # DragRaceApp
 
+Java & JavaFX-based app that uses mySQL-datatables. 
+
 IF you want to test out this app, here's the mySQL-file: 
 
 the app uses user = "Harjoitus" and password "harjoitus"
